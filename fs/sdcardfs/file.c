@@ -80,6 +80,7 @@ static ssize_t sdcardfs_write(struct file *file, const char __user *buf,
 				lower_file->f_path.dentry->d_inode);
 		fsstack_copy_attr_times(inode,
 				lower_file->f_path.dentry->d_inode);
+
 		if (sizeof(loff_t) > sizeof(long))
 			mutex_unlock(&inode->i_mutex);
 	}
